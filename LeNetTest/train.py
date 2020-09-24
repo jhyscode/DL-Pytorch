@@ -19,7 +19,7 @@ transform = transforms.Compose(
     [transforms.ToTensor(),
      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-train_set = torchvision.datasets.CIFAR10(root='./datTruea', train=True,
+train_set = torchvision.datasets.CIFAR10(root='./data', train=True,
                                          download=True, transform=transform)
 # 加载训练集，实际过程需要分批次（batch）训练
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=50,
